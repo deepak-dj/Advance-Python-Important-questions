@@ -1,0 +1,66 @@
+
+
+iterable = are those object which can be iterated on iteration,
+	     object which can be looped over, the obj which contain __iter__ in build method
+	     we can check it by dir(object)
+
+iterator = are the obj where it remember or capture the postion of each data in obj,
+	     It contain a method which is next(object), we can convert any object into iterator and also tell whether the
+	     obj is iterator or not, and each element is feched from iteraror then it will return "stop iteration" exception,
+	     we can check it with dir(object) __next__ must be there in rersult
+	     note => when "for" loop execute it convert obj into iterator
+
+
+generator =  is a function which give has a yield keyword the result, yield is a keyword used to generate a Generator,
+		it is a other way to generate iterartor
+		All the generators are iterator and they produce lazy evaluation, generator can have multiple yield statements in
+	       a single block
+
+
+
+we use generator over for loop to save the memory if we have a big data and if we are using for loop it will occupy a lots of 
+memory 
+
+
+in case of for loop pvm will fist eveluate the operations for all the items in the object then return the result as a whole i the console but in case of
+iterator or generator pvm will return the result in the console for every item after 1 iteration.
+In genertor we get instant result.
+
+
+========================================================================
+
+Logging =  Is  a module which help us record and track the logs information, logs are the part of system documentations about
+	    runtime status of application
+There are 5 levels in loggings
+1- Debug - detailed info
+2- Info - to verify what code is written working fine
+3- warning - unexpected issue
+4- error - very important issue
+5- critical - super important issue 
+
+
+logging.basicConfig(set_level) --------------------> note := default level is warning
+
+with the help of formatting we can remove root i.e. the name of the module
+
+once the root logger get configured it won't be overrided. ex if we imported logging in a module and import that module to another
+another python scripts and in this scripts again we import logging so the logging won't override
+To overcome this issue we need to create a customized loggers.
+
+for custom logger we need to create handlers so following are the steps-
+
+1- import logging
+2- getLogger == logging.getLogger(__name__)
+3- create handlers == there are many types of handlers here we use 2 handlers (stream(show logs in console) and filehandlers(show the logs in file))
+			  s_handlers = logging.StreamHandlers()
+			  f_handlers = logging.FileHandlers(filename)
+4- set level == s_handlers.setLevel(logging.DEBUG)
+		    f_handlers.setLevel(logging.WARNING)
+5- create formatter = logging.Fromatter("%(name)s - %(asctime)s")
+6- set formatter to handlers = s_handler.setFormatter(formatter)
+7- add handler to the logger = logger.addHandler(handler)
+
+=======================================
+
+Class = it is template/buleprint for object creation which contains attributes and functionalities
+object = it is a instance of a class
