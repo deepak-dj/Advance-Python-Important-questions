@@ -1,0 +1,58 @@
+
+Q1. What is the purpose of Python's OOP?
+
+Q2. Where does an inheritance search look for an attribute?
+
+Q3. How do you distinguish between a class object and an instance object?
+
+Q4. What makes the first argument in a class’s method function special?
+
+Q5. What is the purpose of the __init__ method?
+
+Q6. What is the process for creating a class instance?
+
+Q7. What is the process for creating a class?
+
+Q8. How would you define the superclasses of a class?
+
+
+
+Answers
+--------
+
+
+1 - The main concept of OOPs is to bind the data and the functions that work on that together
+ as a single unit so that no other part of the code can access this data.
+
+2 - An inheritance search looks for an attribute first in the instance object, then in the class
+ the instance was created from, then in all higher superclasses, progressing from left to right 
+
+3 - Classes are a kind of factory for creating multiple instances. Classes also support operator
+ overloading methods, which instances inherit, and treat any functions nested in the class as
+ methods for processing instances.
+
+4 - It always receives the instance object that is the implied subject of the method call.
+ It’s usually called 'self' by convention.
+
+5 - If the __init__ method is coded or inherited in a class, Python calls it automatically
+ each time an instance of that class is created. It is also known as constructor
+
+6 -  by calling the class name as though it were a function; any arguments passed into the 
+class name show up as arguments two and beyond in the __init__ constructor method.
+
+	x = ClassName()
+	y = AnotherClass(arg1, arg2)
+
+7 - By using "class" keyword we can create a class as follows:
+    
+	class ClassName():
+		pass
+
+8 - A superclass is the class from which many subclasses can be created. The subclasses inherit the
+ characteristics of a superclass. The superclass is also known as the parent class or base class.
+
+	example:
+		class Son(Father, Mother):
+			pass 
+
+		In this case Father and Mother are superclasses for Son subclass.
