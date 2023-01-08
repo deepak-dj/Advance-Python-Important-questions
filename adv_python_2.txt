@@ -1,0 +1,61 @@
+Q1. What is the relationship between classes and modules?
+
+Q2. How do you make instances and classes?
+
+Q3. Where and how should be class attributes created?
+
+Q4. Where and how are instance attributes created?
+
+Q5. What does the term "self" in a Python class mean?
+
+Q6. How does a Python class handle operator overloading?
+
+Q7. When do you consider allowing operator overloading of your classes?
+
+Q8. What is the most popular form of operator overloading?
+
+Q9. What are the two most important concepts to grasp in order to comprehend Python OOP code?
+
+
+
+answers
+=======
+
+1 - Modules are collections of methods, variable and constants. They cannot generate instances. Classes may generate instances (objects), and have per-instance state (instance variables).
+Modules may be mixed in to classes and other modules. The mixed in module’s constants and methods blend into that class’s own, augmenting the class’s functionality.
+Classes, however, cannot be mixed in to anything.
+A class may inherit from another class, but not from a module.
+A module may not inherit from anything.
+
+
+2- Class is created by using a keyword "class" followed by the class name.
+	ex -  class Employee():
+			pass  
+  To create instances of a class, you call the class using class name and pass in whatever arguments its __init__ method accepts	
+	ex - emp = Employee()
+
+
+3- Class attributes belong to the class itself they will be shared by all the instances. Such attributes are defined in the class body parts usually at the top, for legibility.
+	ex - class Employee():
+			name = "deepak"
+
+
+
+4- class attributes are created inside a class itself within __init__ method.
+
+	ex - class Employee()
+			def __init__(self):
+				self.name = "deepak"
+
+
+5- "self" is a refrence which is pointing to the current object.
+
+6- The operator overloading in Python means provide extended meaning beyond their predefined operational meaning. Such as, we use the "+" operator for adding two integers as well as joining two strings or merging two lists.
+   We can achieve this as the "+" operator is overloaded by the "int" class and "str" class. The user can notice that the same inbuilt operator or function is showing different behaviour for objects of different classes.
+   This process is known as operator overloading
+
+7- when it is required to perform mathmetical, comparision operations into instances or objects.
+
+8-  A very popular and convenient example is the Addition (+) operator. Just think how the '+' operator operates on two numbers and the same operator operates on two strings. It performs “Addition” on numbers whereas it performs “Concatenation” on strings.
+
+9- Both inheritance and polymorphism are key ingredients for designing robust, flexible, and easy-to-maintain software. These concepts are best explained via examples. Let’s start with creating a simple class.
